@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+}
+
+.outlet-frame {
+  width: 100% !important;
+  height: 100% !important;
+  background: #ffffff;
+  border: none;
+}
+
+.my-outlet-frame {
+  width: 100% !important;
+  height: 100% !important;
+  background: lightyellow;
+  border: none;
+}

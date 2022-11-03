@@ -1,0 +1,29 @@
+<div class="container mx-auto">
+  <ul class="flex">
+    <li class="mr-3">
+      <a class="inline-block border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-1 px-3"
+        routerLinkActive="border-blue-500 bg-blue-500 hover:bg-blue-300 text-white" routerLink="/home">Home</a>
+    </li>
+    <li class="mr-3">
+      <a class="inline-block border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-1 px-3"
+        routerLinkActive="border-blue-500 bg-blue-500 hover:bg-blue-300 text-white" routerLink="/about">About</a>
+    </li>
+  </ul>
+
+  <router-outlet></router-outlet>
+  <div class="mt-5 p-3">
+    <div class="mb-3">
+      <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">First name</label>
+      <input [formControl]="name" type="text" id="first_name"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+    </div>
+
+    <button (click)="getConfig()" class="mr-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">
+      Get configuration
+    </button>
+    <button (click)="sendBroadcast(name.value)"
+      class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded">
+      Send Data
+    </button>
+  </div>
+</div>
